@@ -1,5 +1,4 @@
 const http = require('http');
-
 const htmlHandler = require('./htmlResponses');
 const jsonHandler = require('./jsonResponses');
 const textHandler = require('./textResponses');
