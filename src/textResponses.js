@@ -1,0 +1,27 @@
+const hello = 'Hello World';
+
+const getTimeString = () => {
+  const d = new Date();
+  const dateString = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+  return dateString;
+};
+
+const getTime = (request, response) => {
+  response.writeHead(200, { 'Content-Type': 'text/plain' });
+  response.write(getTimeString());
+  response.end();
+};
+
+const getHello = (request, response) => {
+  response.writeHead(200, { 'Content-Type': 'text/plain' });
+  response.write(hello);
+  response.end();
+};
+
+// Overwriting the module exports with a new object
+module.exports = {
+  hello,
+  getTimeString,
+  getTime,
+  getHello,
+};
